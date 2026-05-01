@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Moje CV</h2>
+
+<mat-dialog-content>
+  <iframe src="cv.pdf"></iframe>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Wyjdź</button>
+  <a mat-flat-button color="primary" href="cv.pdf" download target="_blank" rel="noopener">
+    Pobierz
+  </a>
+</mat-dialog-actions>
