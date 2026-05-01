@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>{{ s.form.title[langService.currentLang] }}</h2>
+
+<mat-dialog-content>
+  <div class="contact-form">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ s.form.emailLabel[langService.currentLang] }}</mat-label>
+      <input
+        matInput
+        type="email"
+        [(ngModel)]="email"
+        [placeholder]="s.form.placeholderEmail[langService.currentLang]"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ s.form.messageLabel[langService.currentLang] }}</mat-label>
+      <textarea
+        matInput
+        rows="5"
+        [(ngModel)]="message"
+        [placeholder]="s.form.placeholderMessage[langService.currentLang]"
+        required
+      ></textarea>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="close()">
+    {{ cs.form.cancel[langService.currentLang] }}
+  </button>
+  <button mat-button (click)="send()" [disabled]="!isValid()">
+    {{ cs.form.send[langService.currentLang] }}
+  </button>
+</mat-dialog-actions>

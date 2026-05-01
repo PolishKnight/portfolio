@@ -1,46 +1,59 @@
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
-
 @use '@angular/material' as mat;
+@use 'sass:map';
 
 $my-pinky: #fa93f3;
+$my-base-config: (
+  typography: roboto,
+  density: 0,
+);
 
 html {
   height: 100%;
-
-  @include mat.theme(
-    (
-      color: (
-        primary: mat.$magenta-palette,
-        tertiary: mat.$violet-palette,
-      ),
-      typography: Roboto,
-      density: 0,
-    )
-  );
 }
 
 body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
-  background-image: radial-gradient(#d1c4e9 1px, transparent 1px);
+  margin: 0;
+  height: 100%;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   background-size: 25px 25px;
 
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
+  &.light-theme {
+    @include mat.theme(
+      (
+        color: (
+          primary: mat.$magenta-palette,
+          tertiary: mat.$violet-palette,
+          theme-type: light,
+        ),
+        typography: map.get($my-base-config, typography),
+        density: map.get($my-base-config, density),
+      )
+    );
+
+    background-image: radial-gradient(#d1c4e9 1px, transparent 1px);
+  }
+
+  &.dark-theme {
+    @include mat.theme(
+      (
+        color: (
+          primary: mat.$magenta-palette,
+          tertiary: mat.$violet-palette,
+          theme-type: dark,
+        ),
+        typography: map.get($my-base-config, typography),
+        density: map.get($my-base-config, density),
+      )
+    );
+
+    background-image: radial-gradient(rgb(209 196 233 / 20%) 1px, transparent 1px);
+  }
+
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
-  margin: 0;
-  height: 100%;
 }
 
 ::selection {

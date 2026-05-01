@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { InfoModalComponent } from '../info-modal-component/info-modal-component';
+import { strings } from './strings';
+import { BaseComponent } from '../../../core/base-component';
 
 @Component({
   selector: 'app-contact-modal-component',
@@ -14,10 +16,14 @@ import { InfoModalComponent } from '../info-modal-component/info-modal-component
   templateUrl: './contact-modal-component.html',
   styleUrl: './contact-modal-component.scss',
 })
-export class ContactModalComponent {
+export class ContactModalComponent extends BaseComponent<typeof strings> {
   public dialogRef = inject(MatDialogRef<ContactModalComponent>);
   private dialog = inject(MatDialog);
   private http = inject(HttpClient);
+
+  constructor() {
+    super(strings);
+  }
 
   email = '';
   message = '';

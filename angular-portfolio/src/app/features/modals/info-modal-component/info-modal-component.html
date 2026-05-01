@@ -5,5 +5,7 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button mat-button (click)="close()">Wyjdź</button>
+  <button mat-button (click)="close()">
+    {{ coreStrings.form.cancel[languageService.currentLang] }}
+  </button>
 </mat-dialog-actions>

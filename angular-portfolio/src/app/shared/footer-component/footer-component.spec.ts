@@ -19,4 +19,14 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display the current year in the copyright notice', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const currentYear = new Date().getFullYear().toString();
+
+    const footerText = compiled.querySelector('p')?.textContent;
+
+    expect(footerText).toContain(currentYear);
+    expect(footerText).toContain('Mateusz Lewandowski');
+  });
 });

@@ -4,6 +4,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { strings } from './strings';
+import { BaseComponent } from '../../../core/base-component';
 
 @Component({
   selector: 'app-cv-modal-component',
@@ -11,8 +13,12 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './cv-modal-component.html',
   styleUrl: './cv-modal-component.scss',
 })
-export class CvModalComponent {
+export class CvModalComponent extends BaseComponent<typeof strings> {
   public dialogRef = inject(MatDialogRef<CvModalComponent>);
+
+  constructor() {
+    super(strings);
+  }
 
   close() {
     this.dialogRef.close();

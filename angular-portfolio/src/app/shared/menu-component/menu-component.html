@@ -1,11 +1,49 @@
 <nav>
-  <a href="#home" class="menu-item"> <i class="fas fa-house"></i> </a>
-  <a href="#about" class="menu-item"> <i class="fas fa-user"></i> O mnie </a>
-  <a href="#skills" class="menu-item"> <i class="fas fa-book"></i> Umiejętności </a>
-  <a href="#projects" class="menu-item"> <i class="fas fa-code"></i> Projekty </a>
-  <a href="#contact" class="menu-item"> <i class="fas fa-paper-plane"></i> Kontakt </a>
-  <button (click)="openContact()" class="menu-item badge">
-    <i class="fa-regular fa-envelope"></i> Napisz do mnie
-  </button>
-  <button (click)="openCv()" class="menu-item badge"><i class="fas fa-file-pdf"></i> CV</button>
+  <div>
+    <a href="#home" class="menu-item"> <i class="fas fa-house"></i> {{ cs.logo }}</a>
+    <a href="#about" class="menu-item">
+      <i class="fas fa-user"></i> {{ s.menu.aboutMe[langService.currentLang] }}
+    </a>
+    <a href="#skills" class="menu-item">
+      <i class="fas fa-book"></i> {{ s.menu.skills[langService.currentLang] }}
+    </a>
+    <a href="#projects" class="menu-item">
+      <i class="fas fa-code"></i> {{ s.menu.projects[langService.currentLang] }}
+    </a>
+    <a href="#contact" class="menu-item">
+      <i class="fas fa-paper-plane"></i> {{ s.menu.contact[langService.currentLang] }}
+    </a>
+    <button (click)="openContact()" class="menu-item badge" data-testid="contact-button">
+      <i class="fa-regular fa-envelope"></i>
+      {{ s.menu.writeToMe[langService.currentLang] }}
+    </button>
+    <button (click)="openCv()" class="menu-item badge" data-testid="cv-button">
+      <i class="fas fa-file-pdf"></i> {{ s.menu.cv[langService.currentLang] }}
+    </button>
+  </div>
+
+  <div>
+    <button class="menu-item badge" (click)="themeService.toggleTheme()">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+      {{ cs.theme[themeService.currentTheme][langService.currentLang] }}
+    </button>
+
+    <!-- <div class="lang-dropdown"> -->
+    <button (click)="langService.toggleLanguage()" class="menu-item badge globus-btn">
+      <i class="fas fa-globe"></i>
+      <span class="current-lang">{{ langService.currentLang.toUpperCase() }}</span>
+    </button>
+
+    <!-- <div class="dropdown-content">
+        <button (click)="langService.setLanguage('pl')" class="lang-option">
+          <img src="/flags/pl.svg" width="24" class="flag-img" alt="PL" />
+          {{ coreStrings.language.polish.pl }}
+        </button>
+        <button (click)="langService.setLanguage('en')" class="lang-option">
+          <img src="/flags/gb.svg" width="24" class="flag-img" alt="GB" />
+          {{ coreStrings.language.english.en }}
+        </button>
+      </div> -->
+    <!-- </div> -->
+  </div>
 </nav>

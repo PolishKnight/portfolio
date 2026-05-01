@@ -1,8 +1,11 @@
 import { Component, inject } from '@angular/core';
 
-import { ContactModalComponent } from '../../features/contact-modal-component/contact-modal-component';
-import { CvModalComponent } from '../../features/cv-modal-component/cv-modal-component';
+import { BaseComponent } from '../../core/base-component';
+import { ContactModalComponent } from '../../features/modals/contact-modal-component/contact-modal-component';
+import { CvModalComponent } from '../../features/modals/cv-modal-component/cv-modal-component';
 import { MatDialog } from '@angular/material/dialog';
+import { ThemeService } from '../../core/theme-service';
+import { strings } from './strings';
 
 @Component({
   selector: 'app-menu',
@@ -11,8 +14,13 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './menu-component.html',
   styleUrl: './menu-component.scss',
 })
-export class MenuComponent {
+export class MenuComponent extends BaseComponent<typeof strings> {
   private dialog = inject(MatDialog);
+  public themeService = inject(ThemeService);
+
+  constructor() {
+    super(strings);
+  }
 
   openContact() {
     this.dialog.open(ContactModalComponent, {
