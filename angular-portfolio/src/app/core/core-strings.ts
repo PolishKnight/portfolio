@@ -28,6 +28,10 @@ export const coreStrings = {
       pl: 'Anuluj',
       en: 'Cancel',
     },
+    close: {
+      pl: 'Wyjdź',
+      en: 'Close',
+    },
   },
   language: {
     polish: {

@@ -1,1 +1,146 @@
-/* empty */
+section {
+  padding: 40px 20px;
+  margin: 0 auto;
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    min-height: 120px;
+
+    .timeline-line-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .line {
+        width: 4px;
+        height: 100%;
+        background: var(--mat-sys-outline-variant);
+        border-radius: 2px;
+      }
+
+      .node {
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background: var(--mat-sys-surface);
+        border: 3px solid #fa93f3;
+        box-shadow: 4px 4px 0 rgb(250 147 243 / 30%);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        color: #fa93f3;
+      }
+    }
+
+    &.last .line {
+      height: 40px;
+      background: linear-gradient(to bottom, var(--mat-sys-outline-variant), transparent);
+    }
+
+    .timeline-content {
+      padding-bottom: 50px;
+
+      .date-badge {
+        font-family: 'Courier New', monospace;
+        background: rgb(250 147 243 / 10%);
+        color: #fa93f3;
+        padding: 2px 8px;
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+
+      .job-title {
+        margin: 10px 0 2px;
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+
+      .company-name {
+        margin: 0 0 15px;
+        font-size: 1rem;
+        color: var(--mat-sys-on-surface-variant);
+        font-style: italic;
+      }
+
+      .description {
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .tech-pills {
+        display: flex;
+        gap: 8px;
+
+        .tech-wrapper {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+
+          img {
+            width: 100%;
+            height: auto;
+            padding: 2px 8px;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+          }
+
+          .tooltip {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--hover-color, #333);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: sans-serif;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 10;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -4px;
+              left: 50%;
+              transform: translateX(-50%) rotate(45deg);
+              width: 8px;
+              height: 8px;
+              background-color: inherit;
+            }
+          }
+
+          &:hover {
+            img {
+              filter: grayscale(0%);
+              transform: scale(1.1);
+            }
+
+            .tooltip {
+              top: -35px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

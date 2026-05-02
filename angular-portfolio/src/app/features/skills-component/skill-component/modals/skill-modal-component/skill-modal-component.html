@@ -1,0 +1,23 @@
+<div class="skill-modal" [style.--skill-color]="data.skill.color">
+  <div mat-dialog-title class="modal-header">
+    <div class="icon-wrapper" [style.backgroundColor]="data.skill.color + '22'">
+      <img [src]="data.skill.iconSrc" [alt]="data.skill.name + ' logo'" />
+    </div>
+    <div class="header-text">
+      <h2>{{ data.skill.name }}</h2>
+      <span class="category-badge">{{ data.categoryTitle[langService.currentLang] }}</span>
+    </div>
+  </div>
+
+  <mat-dialog-content class="modal-body">
+    <div class="description-container">
+      <p>{{ data.skill.description[langService.currentLang] }}</p>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="modal-actions">
+    <button mat-flat-button (click)="close()" class="close-btn">
+      {{ cs.form.close[langService.currentLang] }}
+    </button>
+  </mat-dialog-actions>
+</div>

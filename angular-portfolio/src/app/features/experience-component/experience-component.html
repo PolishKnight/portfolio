@@ -1,3 +1,37 @@
 <section>
   <h2>{{ s.title[langService.currentLang] }}</h2>
+
+  <article>
+    <div class="timeline">
+      @for (item of s.timeline; track item.title.en; let first = $first; let last = $last) {
+        <div class="timeline-item" [class.first]="first" [class.last]="last">
+          <div class="timeline-line-container">
+            <div class="line"></div>
+            <div class="node">
+              <i [class]="item.iconClass"></i>
+            </div>
+          </div>
+
+          <div class="timeline-content">
+            <span class="date-badge">{{ item.date[langService.currentLang] }}</span>
+            <h3 class="job-title">{{ item.title[langService.currentLang] }}</h3>
+            <h4 class="company-name">{{ item.company }}</h4>
+
+            <p class="description">{{ item.description[langService.currentLang] }}</p>
+
+            @if (item.techStack) {
+              <div class="tech-pills">
+                @for (tech of item.techStack; track tech) {
+                  <div class="tech-wrapper" [style.--hover-color]="getTechColor(tech)">
+                    <span class="tooltip">{{ getTechName(tech) }}</span>
+                    <img [src]="tech" [alt]="getTechName(tech)" />
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </article>
 </section>

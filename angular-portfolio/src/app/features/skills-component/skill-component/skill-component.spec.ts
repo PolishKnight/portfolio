@@ -11,6 +11,7 @@ describe('SkillComponent', () => {
     name: 'Angular',
     iconSrc: 'skills/angular.png',
     color: '#DD0031',
+    description: { pl: 'Przykładowy opis', en: 'Example description' },
   };
 
   beforeEach(async () => {

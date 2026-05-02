@@ -1,4 +1,7 @@
-<app-menu [class.nav-hidden]="isHidden"></app-menu>
+<app-menu
+  [class.nav-hidden]="isHidden"
+  (anchorClicked)="disableScrollEffectTemporarily()"
+></app-menu>
 
 <main>
   <router-outlet />

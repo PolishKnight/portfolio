@@ -1,16 +1,18 @@
 <section class="skills-container">
   <h2>{{ s.title[langService.currentLang] }}</h2>
 
-  <div class="categories-grid">
-    @for (category of categories; track category.title) {
-      <div class="category-group">
-        <h3 class="category-title">{{ category.title[langService.currentLang] }}</h3>
-        <div class="skills-list">
-          @for (skill of category.skills; track skill.name) {
-            <app-skill [skill]="skill"></app-skill>
-          }
+  <article>
+    <div class="categories-grid">
+      @for (category of categories; track category.title) {
+        <div class="category-group">
+          <h3 class="category-title">{{ category.title[langService.currentLang] }}</h3>
+          <div class="skills-list">
+            @for (skill of category.skills; track skill.name) {
+              <app-skill [skill]="skill" [categoryTitle]="category.title"></app-skill>
+            }
+          </div>
         </div>
-      </div>
-    }
-  </div>
+      }
+    </div>
+  </article>
 </section>

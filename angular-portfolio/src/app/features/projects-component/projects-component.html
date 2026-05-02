@@ -1,3 +1,49 @@
-<section>
-  <h2>{{ s.title[langService.currentLang] }}</h2>
+<section class="projects-section">
+  <h2 class="section-title">{{ s.title[langService.currentLang] }}</h2>
+
+  <article>
+    <div class="slider-container" #sliderContainer>
+      <div class="slider-track">
+        <button mat-icon-button (click)="scroll('left')" aria-label="Scroll left">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        <div>
+          @for (project of projects; track project.title.en) {
+            <mat-card class="project-card">
+              <div class="image-wrapper">
+                <img mat-card-image [src]="project.imgSrc" [alt]="project.title.en" />
+              </div>
+
+              <mat-card-content class="content-area">
+                <h3>{{ project.title[langService.currentLang] }}</h3>
+                <p>{{ project.description[langService.currentLang] }}</p>
+
+                <div class="tech-row">
+                  @for (tech of project.tech; track tech) {
+                    <span class="tech-chip">{{ tech }}</span>
+                  }
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions class="actions-area">
+                @if (project.srcProject) {
+                  <a
+                    [href]="project.srcProject"
+                    target="_blank"
+                    mat-stroked-button
+                    class="project-link"
+                  >
+                    {{ s.buttons.view[langService.currentLang] }}
+                  </a>
+                }
+              </mat-card-actions>
+            </mat-card>
+          }
+        </div>
+        <button mat-icon-button (click)="scroll('right')" aria-label="Scroll right">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+    </div>
+  </article>
 </section>

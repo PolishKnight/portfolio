@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
 
 import { BaseComponent } from '../../core/base-component';
 import { ContactModalComponent } from '../../features/modals/contact-modal-component/contact-modal-component';
@@ -17,6 +17,8 @@ import { strings } from './strings';
 export class MenuComponent extends BaseComponent<typeof strings> {
   private dialog = inject(MatDialog);
   public themeService = inject(ThemeService);
+
+  @Output() anchorClicked = new EventEmitter<void>();
 
   constructor() {
     super(strings);
@@ -39,9 +41,7 @@ export class MenuComponent extends BaseComponent<typeof strings> {
     });
   }
 
-  scroll = 0;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.scroll = window.scrollY;
+  onLinkClick() {
+    this.anchorClicked.emit();
   }
 }

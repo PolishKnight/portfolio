@@ -1,17 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { BaseComponent } from '../../../../../core/base-component';
 import { MatButtonModule } from '@angular/material/button';
-import { BaseComponent } from '../../../core/base-component';
 
 export const strings = {};
 
 @Component({
-  selector: 'app-info-modal-component',
+  selector: 'app-skill-modal-component',
   imports: [MatDialogModule, MatButtonModule],
-  templateUrl: './info-modal-component.html',
+  templateUrl: './skill-modal-component.html',
+  styleUrl: './skill-modal-component.scss',
 })
-export class InfoModalComponent extends BaseComponent<typeof strings> {
-  public dialogRef = inject(MatDialogRef<InfoModalComponent>);
+export class SkillModalComponent extends BaseComponent<typeof strings> {
+  public dialogRef = inject(MatDialogRef<SkillModalComponent>);
   public data = inject(MAT_DIALOG_DATA);
 
   constructor() {
