@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { strings } from './strings';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-experience',
   standalone: true,
   imports: [],
-  templateUrl: './projects-component.html',
-  styleUrl: './projects-component.scss',
+  templateUrl: './experience-component.html',
+  styleUrl: './experience-component.scss',
 })
-export class ProjectsComponent extends BaseComponent<typeof strings> {
+export class ExperienceComponent extends BaseComponent<typeof strings> {
   constructor() {
     super(strings);
   }

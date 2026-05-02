@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 
 import { BaseComponent } from '../../core/base-component';
 import { ContactModalComponent } from '../../features/modals/contact-modal-component/contact-modal-component';
@@ -37,5 +37,11 @@ export class MenuComponent extends BaseComponent<typeof strings> {
       height: '80vh',
       panelClass: 'custom-modal',
     });
+  }
+
+  scroll = 0;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scroll = window.scrollY;
   }
 }

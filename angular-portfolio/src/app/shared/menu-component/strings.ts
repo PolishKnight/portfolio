@@ -1,12 +1,12 @@
 export const strings = {
   menu: {
-    aboutMe: {
-      pl: 'O mnie',
-      en: 'About me',
-    },
     skills: {
       pl: 'Umiejętności',
       en: 'Skills',
+    },
+    experience: {
+      pl: 'Doświadczenie',
+      en: 'Experience',
     },
     projects: {
       pl: 'Projekty',

@@ -1,1 +1,63 @@
-/* empty */
+div {
+  width: 1200px;
+  margin: auto;
+
+  h1 {
+    margin: 40px 0;
+    cursor: pointer;
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--mat-sys-on-surface);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    &::before {
+      content: '<';
+      color: #fa93f3;
+      font-weight: 900;
+    }
+
+    &::after {
+      content: '/>';
+      color: #fa93f3;
+      font-weight: 900;
+    }
+  }
+}
+
+section {
+  article {
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--mat-sys-on-surface-variant);
+      text-align: justify;
+
+      /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+      ::ng-deep .highlight {
+        color: var(--mat-sys-primary);
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: rgb(250 147 243 / 30%);
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,6 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './project-component.scss',
 })
 export class ProjectComponent {
-  @Input() title!: string;
-  @Input() description!: string;
+  @Input({ required: true }) title!: string;
+  @Input({ required: true }) description!: string;
 }

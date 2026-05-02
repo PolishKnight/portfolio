@@ -1,6 +1,7 @@
 export const coreStrings = {
   logo: '<Mateusz Lewandowski/>',
   author: {
+    name: 'Mateusz Lewandowski',
     firstName: 'Mateusz',
     lastName: 'Lewandowski',
   },

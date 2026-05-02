@@ -23,6 +23,8 @@
   transition: transform 0.3s ease;
   animation: wiggle-border 0.8s infinite hr-step;
   box-shadow: 6px 6px 0 rgb(103 58 183 / 20%);
+  min-width: 200px;
+  min-height: 200px;
 
   &:hover {
     transform: translate(-2px, -2px);

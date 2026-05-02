@@ -1,1 +1,12 @@
-<p>about-me-component works!</p>
+<div>
+  <h1>
+    {{ cs.author.name }}
+  </h1>
+</div>
+
+<section>
+  <h2>{{ s.title[langService.currentLang] }}</h2>
+  <article>
+    <p [innerHTML]="s.description[langService.currentLang]"></p>
+  </article>
+</section>
