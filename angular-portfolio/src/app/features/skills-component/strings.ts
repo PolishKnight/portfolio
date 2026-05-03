@@ -13,8 +13,8 @@ export const strings = {
             iconSrc: img.HTML,
             color: '#E34F26',
             description: {
-              pl: 'Struktura nowoczesnych stron internetowych.',
-              en: 'Structure of modern websites.',
+              pl: 'Tworzenie semantycznej i dostępnej struktury stron, dbając o standardy SEO i czytelność kodu.',
+              en: 'Building semantic and accessible web structures, focusing on SEO standards and code readability.',
             },
           },
           {
@@ -22,8 +22,8 @@ export const strings = {
             iconSrc: img.CSS,
             color: '#1572B6',
             description: {
-              pl: 'Stylizacja i layout (Flexbox, Grid).',
-              en: 'Styling and layout (Flexbox, Grid).',
+              pl: 'Projektowanie responsywnych układów przy użyciu Flexbox i Grid oraz dbałość o detale wizualne.',
+              en: 'Designing responsive layouts using Flexbox and Grid with a strong focus on visual details.',
             },
           },
           {
@@ -31,8 +31,8 @@ export const strings = {
             iconSrc: img.SCSS,
             color: '#CF649A',
             description: {
-              pl: 'Zaawansowany preprocesor stylów.',
-              en: 'Advanced style preprocessor.',
+              pl: 'Organizacja stylów za pomocą zmiennych i zagnieżdżeń, co pozwala na łatwiejsze utrzymanie dużych projektów.',
+              en: 'Organizing styles using variables and nesting to ensure better maintainability of large-scale projects.',
             },
           },
           {
@@ -40,8 +40,8 @@ export const strings = {
             iconSrc: img.JS,
             color: '#F7DF1E',
             description: {
-              pl: 'Interaktywność i logika po stronie klienta.',
-              en: 'Client-side interactivity and logic.',
+              pl: 'Implementacja dynamicznych funkcjonalności i logiki, która ożywia interfejs użytkownika.',
+              en: 'Implementing dynamic functionalities and logic that brings the user interface to life.',
             },
           },
           {
@@ -49,8 +49,8 @@ export const strings = {
             iconSrc: img.TS,
             color: '#3178C6',
             description: {
-              pl: 'Typowany JavaScript zwiększający bezpieczeństwo kodu.',
-              en: 'Typed JavaScript for better code safety.',
+              pl: 'Wykorzystanie silnego typowania do tworzenia bezpieczniejszego i bardziej skalowalnego kodu w aplikacjach Angular.',
+              en: 'Using strong typing to build safer and more scalable code within Angular applications.',
             },
           },
           { name: '__SEPARATOR__', iconSrc: '', color: '', description: { pl: '', en: '' } },
@@ -59,8 +59,8 @@ export const strings = {
             iconSrc: img.ANGULAR,
             color: '#DD0031',
             description: {
-              pl: 'Główny framework do budowy SPA.',
-              en: 'Main framework for building SPAs.',
+              pl: 'Budowa modularnych aplikacji typu SPA, wykorzystując komponenty, serwisy i nowoczesny system routingu.',
+              en: 'Building modular SPA applications using components, services, and a modern routing system.',
             },
           },
           {
@@ -68,8 +68,8 @@ export const strings = {
             iconSrc: img.RXJS,
             color: '#B7178C',
             description: {
-              pl: 'Programowanie reaktywne w Angularze.',
-              en: 'Reactive programming in Angular.',
+              pl: 'Obsługa strumieni danych i asynchroniczności, zapewniająca płynne działanie interfejsu.',
+              en: 'Handling data streams and asynchronicity to ensure a smooth and reactive user interface.',
             },
           },
           {
@@ -77,8 +77,8 @@ export const strings = {
             iconSrc: img.BOOTSTRAP,
             color: '#7952B3',
             description: {
-              pl: 'Framework CSS do szybkich layoutów.',
-              en: 'CSS framework for fast layouts.',
+              pl: 'Szybkie prototypowanie i budowa w pełni responsywnych interfejsów opartych na gotowych komponentach.',
+              en: 'Fast prototyping and building fully responsive interfaces based on ready-to-use components.',
             },
           },
         ],
@@ -91,23 +91,26 @@ export const strings = {
             iconSrc: img.PHP,
             color: '#777BB4',
             description: {
-              pl: 'Logika serwerowa i integracja z bazami danych.',
-              en: 'Server-side logic and database integration.',
+              pl: 'Tworzenie skryptów po stronie serwera oraz obsługa komunikacji między aplikacją a bazą danych.',
+              en: 'Developing server-side scripts and handling communication between the application and the database.',
             },
           },
           {
             name: 'MySQL',
             iconSrc: img.MYSQL,
             color: '#00758F',
-            description: { pl: 'Relacyjne bazy danych SQL.', en: 'Relational SQL databases.' },
+            description: {
+              pl: 'Projektowanie struktur relacyjnych baz danych oraz optymalizacja zapytań SQL dla szybkiego dostępu do danych.',
+              en: 'Designing relational database structures and optimizing SQL queries for fast data access.',
+            },
           },
           {
             name: 'PostgreSQL',
             iconSrc: img.POSTGRES,
             color: '#336791',
             description: {
-              pl: 'Zaawansowana obiektowo-relacyjna baza danych.',
-              en: 'Advanced object-relational database.',
+              pl: 'Podstawowa znajomość pracy z zaawansowanym systemem relacyjnym i wykonywania zapytań na gotowych strukturach.',
+              en: 'Basic experience with the advanced relational system and performing queries on existing structures.',
             },
           },
           {
@@ -115,15 +118,18 @@ export const strings = {
             iconSrc: img.FIREBASE,
             color: '#FFCA28',
             description: {
-              pl: 'Platforma backendowa od Google (BaaS).',
-              en: 'Backend platform by Google (BaaS).',
+              pl: 'Wykorzystanie usług chmurowych do autoryzacji, bazy danych czasu rzeczywistego (NoSQL) oraz hostingu aplikacji.',
+              en: 'Utilizing cloud services for authentication, real-time databases (NoSQL), and application hosting.',
             },
           },
           {
             name: 'JSON',
             iconSrc: img.JSON,
             color: '#292929',
-            description: { pl: 'Format wymiany danych.', en: 'Data exchange format.' },
+            description: {
+              pl: 'Efektywne przesyłanie i strukturyzowanie danych w komunikacji API oraz w lokalnych systemach przechowywania informacji.',
+              en: 'Efficient data transmission and structuring in API communication and local information storage systems.',
+            },
           },
         ],
       },
@@ -135,8 +141,8 @@ export const strings = {
             iconSrc: img.CSHARP,
             color: '#239120',
             description: {
-              pl: 'Główny język obiektowy ekosystemu Microsoft.',
-              en: 'Main object-oriented language for Microsoft ecosystem.',
+              pl: 'Wykorzystanie programowania obiektowego do tworzenia logiki gier w Unity oraz stabilnych aplikacji desktopowych.',
+              en: 'Leveraging object-oriented programming to create game logic in Unity and stable desktop applications.',
             },
           },
           {
@@ -144,8 +150,8 @@ export const strings = {
             iconSrc: img.WPF,
             color: '#512BD4',
             description: {
-              pl: 'Aplikacje desktopowe z interfejsem XAML.',
-              en: 'Desktop applications with XAML interface.',
+              pl: 'Budowa aplikacji okienkowych dla systemu Windows z wykorzystaniem języka XAML do projektowania interfejsu.',
+              en: 'Building Windows desktop applications using XAML for user interface design.',
             },
           },
           {
@@ -153,8 +159,8 @@ export const strings = {
             iconSrc: img.UNITY,
             color: '#000000',
             description: {
-              pl: 'Silnik do tworzenia gier i symulacji.',
-              en: 'Engine for game development and simulations.',
+              pl: 'Tworzenie interaktywnych projektów 3D i 2D, w tym implementacja nietypowych metod sterowania (np. gestami ręki).',
+              en: 'Creating interactive 3D and 2D projects, including implementation of unconventional control methods (e.g., hand gestures).',
             },
           },
         ],
@@ -167,8 +173,8 @@ export const strings = {
             iconSrc: img.JAVA,
             color: '#007396',
             description: {
-              pl: 'Programowanie obiektowe klasy Enterprise.',
-              en: 'Enterprise-grade object-oriented programming.',
+              pl: 'Realizacja projektów szkolnych, w tym prostych aplikacji konsolowych oraz mobilnych w środowisku Android Studio.',
+              en: 'Developing school projects, including simple console and mobile applications using Android Studio.',
             },
           },
           {
@@ -176,8 +182,8 @@ export const strings = {
             iconSrc: img.CPP,
             color: '#00599C',
             description: {
-              pl: 'Wydajne programowanie niskopoziomowe.',
-              en: 'High-performance low-level programming.',
+              pl: 'Wykorzystanie języka do nauki algorytmiki i struktur danych oraz rozwiązywania problemów logicznych.',
+              en: 'Using the language for learning algorithms and data structures, and solving logical problems.',
             },
           },
           {
@@ -185,8 +191,8 @@ export const strings = {
             iconSrc: img.PYTHON,
             color: '#3776AB',
             description: {
-              pl: 'Wszechstronny język skryptowy.',
-              en: 'Versatile scripting language.',
+              pl: 'Wykorzystanie języka do rozwiązywania problemów logicznych oraz zadań algorytmicznych w ramach zajęć informatycznych.',
+              en: 'Using the language to solve logical problems and algorithmic tasks as part of computer science classes.',
             },
           },
         ],
@@ -198,22 +204,28 @@ export const strings = {
             name: 'Git',
             iconSrc: img.GIT,
             color: '#F05032',
-            description: { pl: 'System kontroli wersji.', en: 'Version control system.' },
+            description: {
+              pl: 'Zarządzanie historią zmian w kodzie i praca na gałęziach (branches) w projektach indywidualnych.',
+              en: 'Managing code version history and working with branches in personal projects.',
+            },
           },
           {
             name: 'GitHub',
             iconSrc: img.GITHUB,
             color: '#181717',
             description: {
-              pl: 'Hosting projektów i współpraca.',
-              en: 'Project hosting and collaboration.',
+              pl: 'Hosting projektów, publikacja dokumentacji oraz automatyzacja za pomocą GitHub Actions.',
+              en: 'Project hosting, documentation publishing, and automation using GitHub Actions.',
             },
           },
           {
             name: 'Gimp',
             iconSrc: img.GIMP,
             color: '#5C5543',
-            description: { pl: 'Obróbka grafiki rastrowej.', en: 'Raster graphics editing.' },
+            description: {
+              pl: 'Podstawowa edycja grafik, ikon i assetów na potrzeby interfejsów użytkownika.',
+              en: 'Basic editing of graphics, icons, and assets for user interfaces.',
+            },
           },
         ],
       },

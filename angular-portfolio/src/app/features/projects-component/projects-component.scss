@@ -1,12 +1,5 @@
 @use 'sass:map';
 
-.projects-section {
-  padding: 60px 0;
-  max-width: 1050px;
-  margin: auto;
-  position: relative;
-}
-
 .section-title {
   font-size: 1.8rem;
   font-weight: 800;
@@ -56,6 +49,7 @@ button[mat-icon-button] {
   color: var(--mat-sys-primary) !important;
   box-shadow: 4px 4px 0 rgb(250 147 243 / 40%);
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   mat-icon {
     font-size: 32px;
@@ -190,7 +184,7 @@ button[mat-icon-button] {
       &:hover {
         background-color: var(--mat-sys-primary) !important;
         color: var(--mat-sys-on-primary) !important;
-        box-shadow: 0 4px 15px rgb(250 147 43 / 40%);
+        box-shadow: 0 4px 15px rgb(250 147 243 / 60%);
       }
     }
   }

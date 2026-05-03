@@ -24,6 +24,16 @@ export class MenuComponent extends BaseComponent<typeof strings> {
     super(strings);
   }
 
+  changeLanguage() {
+    this.langService.toggleLanguage();
+    const elements = document.querySelectorAll('.global-section');
+    elements.forEach((el) => {
+      el.classList.remove('global-section');
+      void (el as HTMLElement).offsetWidth;
+      el.classList.add('global-section');
+    });
+  }
+
   openContact() {
     this.dialog.open(ContactModalComponent, {
       width: '90%',

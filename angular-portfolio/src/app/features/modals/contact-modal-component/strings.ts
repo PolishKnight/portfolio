@@ -20,5 +20,13 @@ export const strings = {
       pl: 'W czym mogę Ci pomóc?',
       en: 'How can I help you?',
     },
+    emptyField: {
+      pl: 'To pole jest wymagane.',
+      en: 'This field is required.',
+    },
+    invalidEmailField: {
+      pl: 'Wprowadź poprawny adres e-mail.',
+      en: 'Please enter a valid email address.',
+    },
   },
 };

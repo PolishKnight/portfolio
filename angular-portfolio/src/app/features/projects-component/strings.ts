@@ -27,7 +27,7 @@ export const strings = {
         en: 'A multi-platform time management and planning system, developed for the μElektra competition.',
       },
       imgSrc: 'projects/kalendareks.png',
-      tech: ['Angular', 'SCSS', 'Bootstrap'],
+      tech: ['Angular', 'SCSS', 'Bootstrap', 'Firebase'],
       srcProject: 'https://uelektra2026.web.app',
     },
     {

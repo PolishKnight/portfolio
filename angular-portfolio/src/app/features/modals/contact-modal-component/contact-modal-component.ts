@@ -33,30 +33,25 @@ export class ContactModalComponent extends BaseComponent<typeof strings> {
   }
 
   send() {
-    if (this.isValid()) {
-      const payload = {
-        email: this.email,
-        message: this.message,
-        _subject: 'Nowa wiadomość z Portfolio',
-        _captcha: 'false',
-      };
+    const payload = {
+      email: this.email,
+      message: this.message,
+      _subject: 'Nowa wiadomość z Portfolio',
+      _captcha: 'false',
+    };
 
-      const endpoint = 'https://formsubmit.co/ajax/mlewandowski.contact@gmail.com';
+    const endpoint = 'https://formsubmit.co/ajax/mlewandowski.contact@gmail.com';
 
-      this.http.post(endpoint, payload).subscribe({
-        next: () => {
-          this.dialogRef.close();
-          this.openInfo('Dziękuję za wiadomość!', 'Wiadomość została wysłana pomyślnie.');
-        },
-        error: () => {
-          this.dialogRef.close();
-          this.openInfo(
-            'Wystąpił błąd!',
-            'Proszę spróbować później lub wybrać inną opcję kontaktu.',
-          );
-        },
-      });
-    }
+    this.http.post(endpoint, payload).subscribe({
+      next: () => {
+        this.dialogRef.close();
+        this.openInfo('Dziękuję za wiadomość!', 'Wiadomość została wysłana pomyślnie.');
+      },
+      error: () => {
+        this.dialogRef.close();
+        this.openInfo('Wystąpił błąd!', 'Proszę spróbować później lub wybrać inną opcję kontaktu.');
+      },
+    });
   }
 
   openInfo(title: string, description: string) {
@@ -68,12 +63,5 @@ export class ContactModalComponent extends BaseComponent<typeof strings> {
         description: description,
       },
     });
-  }
-
-  isValid(): boolean {
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
-    const messageValid = this.message.trim().length > 0;
-
-    return emailValid && messageValid;
   }
 }

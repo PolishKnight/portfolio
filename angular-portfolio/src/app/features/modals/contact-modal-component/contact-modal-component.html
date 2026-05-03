@@ -8,9 +8,18 @@
         matInput
         type="email"
         [(ngModel)]="email"
+        #emailInput="ngModel"
         [placeholder]="s.form.placeholderEmail[langService.currentLang]"
+        email
         required
       />
+      <mat-error>
+        @if (emailInput.hasError('required')) {
+          {{ s.form.emptyField[langService.currentLang] }}
+        } @else if (emailInput.hasError('email')) {
+          {{ s.form.invalidEmailField[langService.currentLang] }}
+        }
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -19,9 +28,13 @@
         matInput
         rows="5"
         [(ngModel)]="message"
+        #messageInput="ngModel"
         [placeholder]="s.form.placeholderMessage[langService.currentLang]"
         required
       ></textarea>
+      @if (messageInput.invalid && (messageInput.dirty || messageInput.touched)) {
+        <mat-error>{{ s.form.emptyField[langService.currentLang] }}</mat-error>
+      }
     </mat-form-field>
   </div>
 </mat-dialog-content>
@@ -30,7 +43,7 @@
   <button mat-button (click)="close()">
     {{ cs.form.cancel[langService.currentLang] }}
   </button>
-  <button mat-button (click)="send()" [disabled]="!isValid()">
+  <button mat-button (click)="send()" [disabled]="emailInput.invalid || messageInput.invalid">
     {{ cs.form.send[langService.currentLang] }}
   </button>
 </mat-dialog-actions>
