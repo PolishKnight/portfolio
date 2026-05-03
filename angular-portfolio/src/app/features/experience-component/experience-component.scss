@@ -2,6 +2,7 @@ section {
   .timeline {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .timeline-item {
@@ -9,6 +10,11 @@ section {
     grid-template-columns: 60px 1fr;
     gap: 20px;
     min-height: 120px;
+
+    @media (width <= 480px) {
+      grid-template-columns: 45px 1fr;
+      gap: 12px;
+    }
 
     .timeline-line-container {
       display: flex;
@@ -37,12 +43,14 @@ section {
         align-items: center;
         z-index: 2;
         color: #fa93f3;
-      }
-    }
 
-    &.last .line {
-      height: 40px;
-      background: linear-gradient(to bottom, var(--mat-sys-outline-variant), transparent);
+        @media (width <= 480px) {
+          width: 30px;
+          height: 30px;
+          border-width: 2px;
+          font-size: 0.8rem;
+        }
+      }
     }
 
     .timeline-content {
@@ -53,19 +61,20 @@ section {
         background: rgb(250 147 243 / 10%);
         color: #fa93f3;
         padding: 2px 8px;
-        font-size: 0.85rem;
+        font-size: clamp(0.7rem, 2vw, 0.85rem);
         font-weight: bold;
       }
 
       .job-title {
         margin: 10px 0 2px;
-        font-size: 1.4rem;
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
         font-weight: 800;
+        line-height: 1.2;
       }
 
       .company-name {
         margin: 0 0 15px;
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 3vw, 1rem);
         color: var(--mat-sys-on-surface-variant);
         font-style: italic;
       }
@@ -73,18 +82,20 @@ section {
       .description {
         line-height: 1.6;
         margin-bottom: 15px;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
       }
 
       .tech-pills {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
 
         .tech-wrapper {
+          width: clamp(25px, 5vw, 35px);
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 30px;
           cursor: pointer;
           transition: transform 0.2s ease;
 

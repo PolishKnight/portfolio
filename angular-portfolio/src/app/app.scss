@@ -5,14 +5,17 @@ app-menu {
   width: 100%;
   z-index: 1000;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-bottom: 2px solid var(--mat-sys-outline-variant);
 
   &.nav-hidden {
-    transform: translateY(-100px);
+    transform: translateY(-110%);
   }
 }
 
 main {
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 100px;
+
+  @media (width <= 480px) {
+    padding-top: 160px;
+  }
 }
