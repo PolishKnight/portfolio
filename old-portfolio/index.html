@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateusz Lewandowski - Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/fontello-07cb7f0c/css/fontello.css">
+</head>
+<body class="dark">
+
+    <nav class="darknav">
+        <ul id="rozwijacz">
+            <li id="klik">☰</li>
+        </ul>
+        <ul class="anchors">
+            <li><a href="#home"><span class="icon-home-outline"></span><div class="after"></div></a></li>
+            <li><a id="aoMnie" href="#oMnie">O mnie<div class="after"></div></a></li>
+            <li><a id="aumiejetnosci" href="#umiejetnosci">Umiejętności<div class="after"></div></a></li>
+            <li><a id="aprojekty" href="#projekty">Projekty<div class="after"></div></a></li>
+            <li><a id="akontakt" href="#kontakt">Kontakt<div class="aafter"></div></a></li>  
+        </ul>
+
+        <ul class="options">
+            <li>
+                <img id="jezyk" src="images/polska.png" alt="Język polski">
+            </li>
+            <li>
+                <input type="checkbox" id="darkmode" checked>
+                <label class="darkmodeclass" for="darkmode">
+            </li>
+
+        </ul>
+            
+    </nav>
+
+    <div id="countainer">
+    <main>
+        <section id="home" class="dark">
+            <div class="parallax-container">
+                <div class="parallax-bg">
+                    <div class="content">
+                        <h1 id="headerh1" class="header"></h1>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="oMnie" class="dark aboutMe">
+            <h2 id="oMnieh2">O mnie</h2>
+            <h3>Cześć, jestem <span class="naglowki" id="name">Mateusz Lewandowski</span></h3>
+            <p id="oMniep"></p>
+        </section>
+        <section id="umiejetnosci" class="dark">
+            <h2 id="umiejetnoscih2">Umiejętności</h2>
+            <div class="pasek">
+                <span class="material-symbols-outlined">expand_more</span><span id="spanStrony">Strony internetowe</span>
+            </div>
+            <div id="strony" class="umiejetnosci">
+                <div class="languages html">
+                    <div class="icon">
+                        <img src="images/html.png" alt="html">
+                        <h2>HTML</h2>
+                    </div>
+                    <div class="description">
+                        <p id="htmlp">Język, którego używam do tworzenia stron internetowych.</p>
+                    </div>
+                </div>
+    
+                <div class="languages css">
+                    <div class="icon">
+                        <img src="images/css.png" alt="CSS">
+                        <h2>CSS</h2>
+                    </div>
+                    <div class="description">
+                        <p id="cssp">Wykorzystuję do stylizacji i poprawy wyglądu strony.</p>
+                    </div>
+                </div>
+    
+                <div class="languages js">
+                    <div class="icon">
+                        <img src="images/js.png" alt="JS">
+                        <h2>JavaScript</h2>
+                    </div>
+                    <div class="description">
+                        <p id="jsp">Używam tego języka programowania do dodawania funkcjonalności i animacji na stronie internetowej.</p>
+                    </div>
+                </div>
+    
+                <div class="languages mysql">
+                    <div class="icon">
+                        <img src="images/mysql.png" alt="mySQL">
+                        <h2>mySQL</h2>
+                    </div>
+                    <div class="description">
+                        <p id="mysqlp">Uczę się tworzenia i administrowania bazami danych przy użyciu MySQL.</p>
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="pasek">
+                <span class="material-symbols-outlined">expand_more</span> C#
+            </div>
+            <div id="csharp" class="umiejetnosci">
+
+                <div class="languages cs">
+                    <div class="icon">
+                        <img src="images/cs.png" alt="C#">
+                        <h2>C#</h2>
+                    </div>
+                    <div class="description">
+                        <p id="csp">Język, który używam do programowania w Unity i WPF.</p>
+                    </div>
+                </div>
+
+                <div class="languages unity">
+                    <div class="icon">
+                        <img src="images/unity.png" alt="Unity">
+                        <h2>Unity</h2>
+                    </div>
+                    <div class="description">
+                        <p id="unityp">Silnik, który wykorzystuję do tworzenia gier 2D oraz 3D.</p>
+                    </div>
+                </div>
+
+                <div class="languages wpf">
+                    <div class="icon">
+                        <img src="images/wpf.png" alt="WPF">
+                        <h2>WPF</h2>
+                    </div>
+                    <div class="description">
+                        <p id="wpfp">Używam tego frameworka do tworzenia prostych aplikacji desktopowych.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pasek">
+                <span class="material-symbols-outlined">expand_more</span> <span id="spanGrafika">Grafika</span> 
+            </div>
+            <div id="grafika" class="umiejetnosci">
+
+                <div class="languages krita">
+                    <div class="icon">
+                        <img src="images/krita.png" alt="krita">
+                        <h2>Krita</h2>
+                    </div>
+                    <div class="description">
+                        <p id="kritap">Uczę się w tym programie tworzyć własne grafiki.</p>
+                    </div>
+                </div>
+    
+                <div class="languages gimp">
+                    <div class="icon">
+                        <img src="images/gimp.png" alt="gimp">
+                        <h2>Gimp</h2>
+                    </div>
+                    <div class="description">
+                        <p id="gimpp">Używam tego programu do obróbki graficznej.</p>
+                    </div>
+                </div>
+
+                <div class="languages blender">
+                    <div class="icon">
+                        <img src="images/blender.png" alt="blender">
+                        <h2>Blender</h2>
+                    </div>
+                    <div class="description">
+                        <p id="blenderp">Uczę się tworzyć grafiki 3D oraz animacje.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pasek">
+                <span class="material-symbols-outlined">expand_more</span> <span id="spanJezykiPro">Języki programowania</span> 
+            </div>
+            <div id="jezykiProgramowania" class="umiejetnosci">
+
+                <div class="languages python">
+                    <div class="icon">
+                        <img src="images/python.png" alt="python">
+                        <h2>Python</h2>
+                    </div>
+                    <div class="description">
+                        <p id="pythonp">Używam tego języka do tworzenia aplikacji konsolowych, jednak jest to dla mnie poboczny język programowania.</p>
+                    </div>
+                </div>
+
+                <div class="languages cpp">
+                    <div class="icon">
+                        <img src="images/cpp.png" alt="C++">
+                        <h2>C++</h2>
+                    </div>
+                    <div class="description">
+                        <p id="cppp">Znam podstawy tego języka i aktualnie nie skupiam się na poznawaniu go głębiej.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pasek">
+                <span class="material-symbols-outlined">expand_more</span> <span id="spanJezyki">Języki</span>
+            </div>
+            <div id="jezykispan" class="umiejetnosci">
+
+                <div class="languages angielski">
+                    <div class="icon">
+                        <img src="images/wb.png" alt="flaga Wielkiej Brytanii">
+                        <h2 id="angielskih2">Angielski</h2>
+                    </div>
+                    <div class="description">
+                        <p id="angielskip">Mój poziom angielskiego to około A2/A2+. Cały czas pracuję nad rozwijaniem tego języka.</p>
+                    </div>
+                </div>
+
+                <div class="languages niemiecki">
+                    <div class="icon">
+                        <img src="images/niemcy.png" alt="flaga Niemiec">
+                        <h2 id="niemieckih2">Niemiecki</h2>
+                    </div>
+                    <div class="description">
+                        <p id="niemieckip">Znam niemiecki na poziomie podstawowym.</p>
+                    </div>
+                </div>
+
+                <div class="languages koreanski">
+                    <div class="icon">
+                        <img src="images/korea.png" alt="flaga Korei Południowej">
+                        <h2 id="koreanskih2">Koreański</h2>
+                    </div>
+                    <div class="description">
+                        <p id="koreanskip">Koreańskiego uczę się w wolnym czasie i traktuje to jako hobby.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="projekty" class="dark">
+            <h2 id="projektyh2">Projekty</h2>
+            <br><br>
+            <div id="projects">
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #1</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum asperiores beatae aperiam consequatur voluptas sed fugit numquam doloribus?
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #2</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. At praesentium reiciendis sequi quas repellat eos quis suscipit fuga dignissimos excepturi nisi porro aliquam nam nemo laborum...
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #3</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, laborum? At eligendi perspiciatis reprehenderit dolorem optio illum incidunt...
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #4</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam esse temporibus repellendus totam possimus ratione, accusantium repudiandae dolores iusto? Harum officia nam ea a id consequuntur, ab mollitia totam!
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #5</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, mollitia aperiam. Tempore quibusdam voluptas magni at illo modi quos odit neque nulla facere vel inventore totam nemo, asperiores iusto soluta?
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img">
+                        <img src="images/banner.png">
+                    </div>
+                    <h3 class="podpisy">Podpis #6</h3>
+                    <div class="description">
+                        W trakcie pracy... <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quis dicta necessitatibus facere suscipit soluta distinctio repellat placeat fugiat error, vero omnis accusamus...
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <span id="left" class="material-symbols-outlined arrow">arrow_back_ios</span>
+                <span id="right" class="material-symbols-outlined arrow">arrow_forward_ios</span>
+            </div>
+        </section>
+        <section id="kontakt" class="dark formularz">
+            <h2 id="kontakth2">Kontakt</h2>
+            <form id="contactform" action="https://formsubmit.io/send/mateusz.lewandowski.contact@gmail.com" method="POST">
+                <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/mail.html">
+                <table class="formularz">
+                    <tr>
+                        <td>
+                            <label id="nicklabel" for="nick">Nick lub imię i nazwisko</label>
+                            <input id="nick" name="nick" type="text" placeholder="Wpisz swój nick">
+                        </td>
+                        <td>
+                            <label id="emaillabel" for="mail">Twój e-mail</label>
+                            <input id="mail" name="mail" type="email" placeholder="Wpisz swój e-mail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label id="msglabel" for="msg">Twoja wiadomość</label>
+                            <textarea name="msg" id="msg" rows="5" placeholder="Wpisz swoją wiadomość"></textarea>
+                        
+                            <input name="_formsubmit_id" type="text" style="display:none">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="poziom">
+                            <input id="wyslij" value="Wyślij" type="submit">
+                            <input id="wyczysc"  value="Wyczyść" type="reset">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </section>
+    </main>
+    </div>
+    
+    <footer class="contact dark">
+            <a href="mailto:mateusz.lewandowski.contact@gmail.com" class="mail itemCenter">
+                <span class="tooltip tmail">e-mail</span>
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100045264482039" target="_blank" class="facebook itemCenter">
+                <span class="tooltip tfacebook">Facebook</span>
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/polish_knight/" target="_blank" class="itemCenter instagram">
+                <span class="tooltip tinstagram">Instagram</span>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/PolishKnight" target="_blank" class="itemCenter github">
+                <span class="tooltip tgithub">GitHub</span>
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://twitter.com/KnightPolish" target="_blank" class="itemCenter twitter">
+                <span class="tooltip ttwitter">Twitter</span>
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            
+            
+    </footer>
+    <footer class="dark copy">
+        <h4 id="copyh4">&copy; 2024 Mateusz Lewandowski. Wszystkie prawa zastrzeżone.</h4>
+    </footer>
+
+    <script src="js/responsywnosc.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/paski.js"></script>
+    <script src="js/projekty.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/jezyk.js"></script>
+    <script src="js/paralaksa.js"></script>
+    <script src="https://kit.fontawesome.com/44a50bee12.js"></script>
+
+</body>
+</html>

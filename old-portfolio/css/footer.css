@@ -1,0 +1,164 @@
+.dark footer{
+    background-color: #151515;
+}
+
+.light footer{
+    background-color: #eaeaea;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    place-content: center;
+    justify-items: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px 0 10px 0;
+}
+
+.contact a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    color: #eee;
+    text-decoration: none;
+}
+
+.itemCenter{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90%;
+    font-size: 35px;
+    transition: all 0.2s ease-in-out;
+}
+
+.light .itemCenter{
+    background-color: #f2f2f2;
+}
+
+.dark .itemCenter{
+    background-color: #222;
+}
+
+.light i{
+    color: #111;
+}
+
+.light a:hover i{
+    color: #eee;
+}
+
+.dark i{
+    color: #eee;
+}
+
+.tooltip{
+    visibility: hidden;
+    color: #eee;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.itemCenter:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    transform: translateX(-50%);
+}
+
+.tmail{
+    margin-left: -55px;
+    width: 100px;
+    background-color: #333;
+}
+
+.tmail::before{
+    border-color: #333 transparent transparent transparent;
+}
+
+.tfacebook{
+    margin-left: -55px;
+    width: 100px;
+    background-color: #0866ff;
+}
+
+.tfacebook::before{
+    border-color: #0866ff transparent transparent transparent;
+}
+
+.tinstagram{
+    margin-left: -55px;
+    width: 100px;
+    background-color: #e4405f;
+}
+
+.tinstagram::before{
+    border-color: #e4405f transparent transparent transparent;
+}
+
+.tgithub{
+  margin-left: -55px;
+  width: 100px;
+  background-color: #333;
+}
+
+.tgithub::before{
+    border-color: #333 transparent transparent transparent;
+}
+
+.ttwitter{
+    margin-left: -55px;
+    width: 100px;
+    background-color: #000;
+}
+
+.ttwitter::before{
+    border-color: #000 transparent transparent transparent;
+}
+
+.mail:hover{
+    background-color: #333;
+}
+
+.facebook:hover{
+    background-color: #0866ff;
+}
+
+.instagram:hover{
+    background-color: #e4405f;
+}
+
+.github:hover{
+    background-color: #333;
+}
+
+.twitter:hover{
+    background-color: #000;
+}
+
+.copy{
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
