@@ -3,7 +3,7 @@
 
   <article>
     <div class="timeline">
-      @for (item of s.timeline; track item.title.en; let first = $first; let last = $last) {
+      @for (item of s.timeline; track $index; let first = $first; let last = $last) {
         <div class="timeline-item" [class.first]="first" [class.last]="last">
           <div class="timeline-line-container">
             <div class="line"></div>
@@ -21,7 +21,7 @@
 
             @if (item.techStack) {
               <div class="tech-pills">
-                @for (tech of item.techStack; track tech) {
+                @for (tech of item.techStack; track $index) {
                   <div class="tech-wrapper" [style.--hover-color]="getTechColor(tech)">
                     <span class="tooltip">{{ getTechName(tech) }}</span>
                     <img [src]="tech" [alt]="getTechName(tech)" />

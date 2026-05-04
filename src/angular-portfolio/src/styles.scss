@@ -9,8 +9,13 @@ $my-base-config: (
 
 html {
   height: 100%;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   overflow-x: hidden;
+}
+
+.mat-drawer-content,
+.mat-sidenav-content {
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -21,6 +26,7 @@ body {
     color 0.3s ease;
   background-size: 25px 25px;
   overflow-x: hidden;
+  scroll-behavior: smooth !important;
 
   &.light-theme {
     @include mat.theme(
