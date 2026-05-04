@@ -1,14 +1,21 @@
 <h2 mat-dialog-title>{{ s.myCv[langService.currentLang] }}</h2>
 
 <mat-dialog-content>
-  <iframe src="cv.pdf"></iframe>
+  <iframe src="Mateusz_Lewandowski_CV.pdf"></iframe>
 </mat-dialog-content>
 
 <mat-dialog-actions>
   <button mat-button (click)="close()">
     {{ cs.form.close[langService.currentLang] }}
   </button>
-  <a mat-flat-button color="primary" href="cv.pdf" download target="_blank" rel="noopener">
+  <a
+    mat-flat-button
+    color="primary"
+    href="Mateusz_Lewandowski_CV.pdf"
+    download
+    target="_blank"
+    rel="noopener"
+  >
     {{ cs.form.save[langService.currentLang] }}
   </a>
 </mat-dialog-actions>

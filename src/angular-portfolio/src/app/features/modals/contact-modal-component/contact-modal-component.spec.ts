@@ -43,13 +43,13 @@ describe('CvModalComponent', () => {
 
   it('should have iframe with correct source', () => {
     const iframe = fixture.nativeElement.querySelector('iframe');
-    expect(iframe.src).toContain('cv.pdf');
+    expect(iframe.src).toContain('Mateusz_Lewandowski_CV.pdf');
   });
 
   it('should have a download link with correct attributes', () => {
     const downloadBtn = fixture.nativeElement.querySelector('a[download]');
 
-    expect(downloadBtn.getAttribute('href')).toBe('cv.pdf');
+    expect(downloadBtn.getAttribute('href')).toBe('Mateusz_Lewandowski_CV.pdf');
     expect(downloadBtn.getAttribute('target')).toBe('_blank');
     expect(downloadBtn.getAttribute('rel')).toBe('noopener');
     expect(downloadBtn.hasAttribute('download')).toBe(true);
